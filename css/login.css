@@ -1,0 +1,56 @@
+/* 
+    Document   : main
+    Created on : Dec 4, 2013, 11:03:51 AM
+    Author     : user123
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+hr {
+    border-color: cornflowerblue;
+    size: 2px;
+}
+
+input {
+    font-family: Electrolize;
+}
+
+
+#submit {
+    font-family: Electrolize;
+    border-color: dodgerblue;
+    background: #143270;
+    cursor: pointer;
+    border-style: solid;
+    color: white;
+    font-size: 1em;
+    border-width: 1px;
+    padding: 3px;
+}
+
+#login_form {
+    border-style: solid;
+    border-color: darkcyan;
+    font-family: Electrolize;
+    color: black;
+    text-align: center;
+    position:absolute;
+    width:350px;
+    height:250px;
+    z-index:15;
+    top:50%;
+    left:50%;
+    padding: 10px;
+    margin:-125px 0 0 -175px;
+    background: lightblue;
+    
+}
+
+#error {
+    color: #990000;
+    background: #D0D0D0;
+}
