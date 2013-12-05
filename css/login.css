@@ -33,6 +33,7 @@ input {
 }
 
 #login_form {
+    background-image:url('../resource/img/login_gradient.jpg');
     border-style: solid;
     border-color: darkcyan;
     font-family: Electrolize;
