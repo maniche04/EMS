@@ -31,7 +31,7 @@ $config['logo_url']     = $config['base_url'] . "resource/img/logo.png";
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

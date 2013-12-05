@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "/css/" . $css . ".css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "css/" . $css . ".css" ?>">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Electrolize|Ubuntu">
         <title><?php echo $title ?></title>
 
@@ -17,6 +17,10 @@
                 <?php
                 $links = array(
                     'Home' => 'home',
+                    'Assignments' => 'assignment',
+                    'Clients' => 'client',
+                    'Staffs' => 'staff',
+                    'Logs' => 'logs',
                     'About' => 'about'
                     
                 );
@@ -37,7 +41,7 @@
             </div>
 
             <div id="logout">
-    <?php echo anchor('login/doLogout', 'Logout'); ?>
+    <?php echo anchor('login/doLogout', 'Logout (' . $username . ")"); ?>
             </div>
         </div>
 <?php } ?>

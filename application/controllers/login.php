@@ -53,7 +53,7 @@ class Login extends CI_Controller {
                         'username' => $user->username
                     );
                     $this->session->set_userdata($session_data);
-                    redirect('about');
+                    redirect('home');
                 } else {
                     $this->header['errors'] = "<br> Invalid login credentials!";
                     $this->index();
