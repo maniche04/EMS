@@ -1,0 +1,146 @@
+/* 
+    Document   : main
+    Created on : Dec 4, 2013, 11:03:51 AM
+    Author     : user123
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 20px; /* bottom = footer height */
+}
+
+.wrapper {
+    height: auto;
+    padding: 10px;
+    font-family: Electrolize;
+}
+
+#submit {
+    font-family: Electrolize;
+    border-radius: 3px;
+    border-color: dodgerblue;
+    background: #143270;
+    cursor: pointer;
+    border-style: solid;
+    color: white;
+    font-size: .9em;
+    border-width: 1px;
+    padding: 4px;
+}
+
+#error {
+    font-size: 0.8em;
+    color: #f9f9f9;
+    background: firebrick;
+    border-radius: 9px;
+    box-shadow: lightblue 0 0 2px 0;
+}
+
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-right: 20px;
+    margin-top: 2px;
+    display: block;
+    font-family: Electrolize;
+    text-align: center;
+    color: black;
+    background-image:url('../resource/img/login_gradient.jpg');
+    border-top: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-color: #A70000;
+    border-style: solid;
+
+}
+
+#logo {
+    float: left;
+    padding: 5px;
+    padding-left: 25px;
+    height: 70px;
+    width: 170px;
+}
+
+#site_title {
+    height: 80px;
+    background-image:url('../resource/img/login_gradient.jpg');
+    width: 100%;
+    margin-top: -1px;
+    margin-bottom: 0px;
+    border: none;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px;
+    border-color: #A70000;
+    border-style: solid;
+
+}
+
+#title_text{
+    padding-top: 25px;
+    margin-left: 217px;
+    height: 70px;
+    font-family: 'Electrolize';
+    font-size: 29px;
+}
+
+.menubar {
+    height: 20px;
+    padding: 5px;
+    padding-top: 0px;
+    padding-left: 10px;
+    font-family: Electrolize;
+    color: white;
+    clear: both;
+    background: #A70000;
+}
+
+#links {
+    padding-right: 4px;
+    float: left;
+}
+
+#logout {
+    padding-right: 4px;
+    float: right;
+    
+}
+
+a{
+    margin: 4px;
+    float: left;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: block;
+    color: white;
+    background: #A70000;
+    text-decoration: none
+}
+
+a:hover{
+    color: #A70000;
+    background: white;
+}
+
+a#current_link {
+    color: #A70000;
+    background: white;
+    
+}

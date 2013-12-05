@@ -1,6 +1,6 @@
 <?php
 
-class About extends CI_Controller {
+class Home extends CI_Controller {
     
     public $data;
     
@@ -11,7 +11,7 @@ class About extends CI_Controller {
         } else {
             $this->data = array(
                 'show_header' => true,
-                'title' => 'About Us',
+                'title' => 'Home',
                 'username' => $this->session->userdata('username'),
                 'css' => 'main',
                 'site_name' => $this->config->item('site_name'),
@@ -21,15 +21,11 @@ class About extends CI_Controller {
     }
 
     public function index() {
-        $this->data['page_content'] = 'about/index' ;
+        $this->data['page_content'] = 'home_index' ;
         $this->load->view('templates/page',$this->data);
     }
 
-    public function server() {
-        $this->data['page_content'] = 'about/server_view' ;
-        $this->load->view('templates/page',$this->data);
-    }
-
+    
 }
 
 ?>

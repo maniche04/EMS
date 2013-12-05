@@ -6,6 +6,10 @@
         Purpose of the stylesheet follows.
 */
 
+body {
+    background: white;
+}
+
 root { 
     display: block;
 }
@@ -22,20 +26,21 @@ input {
 
 #submit {
     font-family: Electrolize;
+    border-radius: 3px;
     border-color: dodgerblue;
     background: #143270;
     cursor: pointer;
     border-style: solid;
     color: white;
-    font-size: 1em;
+    font-size: .9em;
     border-width: 1px;
-    padding: 3px;
+    padding: 4px;
 }
 
 #login_form {
+    box-shadow: #D893A1 0 2px 0 0 ;
+    border-radius: 13px;
     background-image:url('../resource/img/login_gradient.jpg');
-    border-style: solid;
-    border-color: darkcyan;
     font-family: Electrolize;
     color: black;
     text-align: center;
@@ -47,11 +52,14 @@ input {
     left:50%;
     padding: 10px;
     margin:-125px 0 0 -175px;
-    background: lightblue;
+    
     
 }
 
 #error {
-    color: #990000;
-    background: #D893A1;
+    font-size: 0.8em;
+    color: #f9f9f9;
+    background: firebrick;
+    border-radius: 9px;
+    box-shadow: lightblue 0 0 2px 0;
 }

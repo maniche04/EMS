@@ -7,6 +7,7 @@ class Login extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->header = array(
+            'show_header' => false,
             'title' => 'Dev EMS: Login',
             'css' => 'login',
             'logo_url' => $this->config->item('logo_url'),
@@ -45,6 +46,13 @@ class Login extends CI_Controller {
                 $user = User::findByUsername($input_username);
                 $input_password = $this->input->post('password');
                 if ($user->password == $input_password) {
+                    //LOGIN SUCCESS!
+                    $session_data = array(
+                        'logged_in' => true,
+                        'userid' => $user->id,
+                        'username' => $user->username
+                    );
+                    $this->session->set_userdata($session_data);
                     redirect('about');
                 } else {
                     $this->header['errors'] = "<br> Invalid login credentials!";
@@ -56,6 +64,15 @@ class Login extends CI_Controller {
                 $this->index();
             }
         }
+    }
+
+    public function doLogout() {
+
+        $this->session->unset_userdata('logged_in');
+        $this->session->unset_userdata('userid');
+        $this->session->unset_userdata('username');
+
+        redirect('login');
     }
 
 }
