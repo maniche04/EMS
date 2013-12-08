@@ -6,12 +6,16 @@
         Purpose of the stylesheet follows.
 */
 
-
-
 html {
     position: relative;
     min-height: 100%;
 }
+
+hr {
+    border-color: cornflowerblue;
+    size: 2px;
+}
+
 
 body {
     background-color: gainsboro;
@@ -20,10 +24,18 @@ body {
 
 .wrapper {
     height: auto;
-    padding: 10px;
     padding-top: 20px;
     font-family: Electrolize;
     text-align: justify;
+}
+
+#content {
+    width: 84%;
+    position: relative;
+    padding: 10px;
+    padding-top: 1px;
+    float: left;
+
 }
 
 #submit {
@@ -122,18 +134,17 @@ body {
 #logout {
     padding-right: 4px;
     float: right;
-    
+
 }
 
 a{
-    
     margin: 4px;
     float: left;
     padding: 3px;
     padding-left: 12px;
     padding-right: 12px;
     display: block;
-    color: gainsboro;
+    color: white;
     background: #A70000;
     text-decoration: none
 }
@@ -143,8 +154,152 @@ a:hover{
     background: gainsboro;
 }
 
+a:active{
+    color: #A70000;
+    background: white;
+}
+
 a#current_link {
     color: #A70000;
     background: gainsboro;
+
+}
+
+.nav_bar {
+    margin-top: -15px;
+    float:right;
+    height: 100%;
+    width: 162px;
+    padding: 5px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 0px;
+    font-family: Electrolize;
+    color: white;
+    background: #A70000;
+}
+
+.nav_bar a{
+    margin-left: -15px;
+    width: 140px;
+    float: left;
+    padding: 3px;
+    padding-left: 12px;
+    display: block;
+    color: white;
+    background: #A70000;
+    text-decoration: none
+}
+.nav_bar a:hover{
+    color: #A70000;
+    background: gainsboro;
+}
+
+.nav_bar a:active{
+    color: #A70000;
+    background: white;
+}
+
+#error_mid {
+    margin: 12%;
+    margin-left: 26%;
+    width: 50%;
+    vertical-align: bottom;
+    padding: 10px;
+    font-size: 1em;
+    color: #f9f9f9;
+    background: firebrick;
+    border-radius: 9px;
+    box-shadow: lightblue 2px 8px 0 0;
+}
+
+#info_wrapper {
+    font-family: Ubuntu;
+    padding: 3px;
+    padding-top: -10px;
+    padding-left: 9px;
+    background-image: url('../resource/img/login_gradient.jpg');
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-right: 9px;
+}
+
+h4 {
+    font-family: Electrolize;
+    width: 30%;
+    text-align: center;
+    background-color: #143270;
+    display: block;
+    border-radius: 3px;
+    color: white;
+    padding: 2px;
+    margin-top: -7px;
+    margin-bottom: 12px;
+
+}
+
+h3 {
+    font-family: Electrolize;
+    width: 100%;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: #143270;
+    display: block;
+    border-radius: 3px;
+    color: white;
+    padding: 4px;
+    margin-top: -7px;
+    margin-bottom: 12px;
+
+}
+
+
+
+#commands a {
+    padding: 5px;
+    border-radius: 5px;
+    float:right;
+    display: block;
+    font-size: 0.8em;
+    background-color: #A70000;
+}
+
+#commands a:hover {
+    color: #A70000;
+    background-color: gainsboro;
+}
+
+#commands a:active {
+    color: #A70000;
+    background-color: white;
+}
+
+#info_wrapper table{
+    font-family: Ubuntu;
+    font-size: 0.9em;
+    border-radius: 6px;
+    width: 90%;
+    border-collapse: collapse;
+    padding: 2px;
     
+}
+
+td {
+    height: 9px;
+    padding: 3px;
+}
+
+#info_wrapper tr:nth-child(odd) {
+    background-color: lightblue;
+    border-radius: 3px;
+}
+
+*[data-href] {
+    cursor: pointer;
+}
+
+th {
+    background-color: #143270;
+    color: white;
 }

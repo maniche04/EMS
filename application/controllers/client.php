@@ -11,12 +11,8 @@ class Client extends CI_Controller {
         } else {
             $this->load->model('clients');
             $this->data = array(
-                'show_header' => true,
-                'title' => 'EMS: Client',
-                'username' => $this->session->userdata('username'),
-                'css' => 'main',
-                'site_name' => $this->config->item('site_name'),
-                'logo_url' => $this->config->item('logo_url'),
+                'title' => $this->config->item('site_short_name') . ' : Client',
+                'nav_links' => $this->accesscontrol->navbar_links()
             );
         }
     }
@@ -27,6 +23,7 @@ class Client extends CI_Controller {
     }
 
     public function go($identifier) {
+
         if (!isset($identifier)) {
             redirect('client');
         } else {
@@ -45,11 +42,19 @@ class Client extends CI_Controller {
                 $this->data['page_content'] = 'client/overview';
                 $this->load->view('templates/page', $this->data);
             } else {
-               redirect('client');
+                redirect('client');
             }
         } else {
             //NOTHING
             redirect('client');
+        }
+    }
+
+    public function add() {
+        if ($this->accesscontrol->access_check()) {
+            $this->data['title'] = 'Add Client';
+            $this->data['page_content'] = 'client/add';
+            $this->load->view('templates/page', $this->data);
         }
     }
 

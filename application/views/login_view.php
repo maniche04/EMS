@@ -6,15 +6,17 @@ and open the template in the editor.
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Dev Associates EMS : Login</title>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "css/login.css" ?>">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Electrolize|Ubuntu">
+        <title>EMS : Login</title>
     </head>
     <body>
         <div id="wrapper">
             <div id="login_form">
-                <img src="<?php echo $logo_url ?>" width="140px" height="55px">
+                <img src="<?php echo $this->config->item('logo_url') ?>" width="140px" height="55px">
                 <br>
                 <br>
-                <?php echo "<b>" . strtoupper($site_name) . "</b>" ?>
+                <?php echo "<b>" . strtoupper($this->config->item('site_name')) . "</b>" ?>
                 <hr>
                 <?php echo form_open('login/doLogin'); ?>
                 <p>Please provide your login credentials!</p>
@@ -22,7 +24,7 @@ and open the template in the editor.
                 <table align ="center" width="80%">
                     <tr>
                         <td align="left"><b>Username: </b></td>
-                        <td><input type="text" name="username" value="<?php echo $username; ?>"></td>
+                        <td><?php echo form_input('username', set_value('username',"")) ?></td>
                     </tr>
                     <tr>
                         <td align="left"><b>Password: </b></td>     

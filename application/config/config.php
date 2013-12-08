@@ -14,9 +14,10 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/EMS/';
+$config['base_url']	= 'http://localhost/~manish/EMS/';
 $config['site_root']    = $_SERVER['DOCUMENT_ROOT'];
 $config['site_name']    = "Engagement Management System";
+$config['site_short_name']    = "EMS";
 $config['css_url']      = $config['base_url'] . "css/";
 $config['img_url']      = $config['base_url'] . "resource/img/";
 $config['logo_url']     = $config['base_url'] . "resource/img/logo.png";

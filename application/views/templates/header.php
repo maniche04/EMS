@@ -2,49 +2,60 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "css/" . $css . ".css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "css/main.css" ?>">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Electrolize|Ubuntu">
+        <script scr="<?php echo base_url() . "js/jquery.js" ?>"></script>
         <title><?php echo $title ?></title>
 
-        <?php if (!($show_header == false)) { ?>
-
-        <div id="site_title">
-            <img id="logo" src="<?php echo $logo_url ?>">
-            <div id="title_text"> <?php echo " | " . $site_name; ?> </div> 
-        </div>
-        <div class="menubar">
-            <div id="links">
-                <?php
+    <div id="site_title">
+        <img id="logo" src="<?php echo $this->config->item('logo_url') ?>">
+        <div id="title_text"> <b><?php echo " | " . $this->config->item('site_name'); ?></b> </div> 
+    </div>
+    <div class="menubar">
+        <div id="links">
+            <?php
+            if ($this->session->userdata('user_level') == 1) {
                 $links = array(
                     'Home' => 'home',
                     'Assignments' => 'assignment',
                     'Clients' => 'client',
                     'Staffs' => 'staff',
+                    'News' => 'news',
+                    'Notices' => 'notice',
                     'Logs' => 'logs',
                     'About' => 'about'
-                    
                 );
+            } else {
+                $links = array(
+                    'Home' => 'home',
+                    'Assignments' => 'assignment',
+                    'Clients' => 'client',
+                    'News' => 'news',
+                    'Notices' => 'notice',
+                    'About' => 'about'
+                );
+            }
+            ?>
+
+            <?php foreach ($links as $label => $link) : ?>
+                <?php
+                if ($this->uri->segment(1) == $link) {
+                    echo anchor($link, $label, 'id="current_link"');
+                } else {
+                    echo anchor($link, $label);
+                }
                 ?>
 
-                <?php foreach ($links as $label => $link) : ?>
-                    <?php
-                    if ($this->uri->segment(1) == $link) {
-                        echo anchor($link, $label, 'id="current_link"');
-                    } else {
-                        echo anchor($link, $label);
-                    }
-                    ?>
-
-                <?php endforeach; ?>
+            <?php endforeach; ?>
 
 
-            </div>
-
-            <div id="logout">
-    <?php echo anchor('login/doLogout', 'Logout (' . $username . ")"); ?>
-            </div>
         </div>
-<?php } ?>
+
+        <div id="logout">
+            <?php echo anchor('login/doLogout', 'Logout (' . $this->session->userdata('username') . ")"); ?>
+        </div>
+    </div>
+
 
 
 </head>

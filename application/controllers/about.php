@@ -25,8 +25,8 @@ class About extends CI_Controller {
         $this->load->view('templates/page',$this->data);
     }
 
-    public function server() {
-        $this->data['page_content'] = 'about/server_view' ;
+    public function developer() {
+        $this->data['page_content'] = 'about/developer' ;
         $this->load->view('templates/page',$this->data);
     }
 
