@@ -21,12 +21,8 @@ class Notice extends CI_Controller {
         if ($notices_firm = $this->notice_model->getbytype('firm')) {
             $this->data['notices_firm'] = $notices_firm;
         };
-        if ($this->session->userdata('user_level') == 1) {
-            $this->data['page_content'] = 'notice/index/1';
-        } else {
-            $this->data['page_content'] = 'notice/index/others';
-        }
 
+        $this->data['page_content'] = 'notice/overview';
         $this->load->view('templates/page', $this->data);
     }
 
@@ -45,10 +41,21 @@ class Notice extends CI_Controller {
                 $result = $this->notice_model->getbytype($this->uri->segment(3));
             }
             $this->data['type'] = $type;
-            $this->data['notices'] = $result;
-            $this->data['page_content'] = 'notice/type';
+            $this->data['notices_firm'] = $result;
+            $this->data['page_content'] = 'notice/overview/firm';
             $this->load->view('templates/page', $this->data);
         }
+    }
+
+    public function type_get() {
+        if (!($type = $this->uri->segment(3))) {
+            redirect('notice/index');
+        } else {
+            $result = $this->notice_model->getbytype($this->uri->segment(3));
+        }
+        $this->data['type'] = $type;
+        $this->data['notices_firm'] = $result;
+        $this->load->view('notice/overview/firm', $this->data);
     }
 
     public function view() {
@@ -65,4 +72,5 @@ class Notice extends CI_Controller {
     }
 
 }
+
 ?>

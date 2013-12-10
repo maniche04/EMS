@@ -1,50 +1,72 @@
 <br>
 <div id ="info_wrapper">
-    <h4>FIRM NOTICES</h4>
-    <table>
-        
-        <?php
-        if (isset($notices_firm)) {
-            foreach ($notices_firm as $notice):
-                ?> 
-                <tr>
-                    <td width='25%' align='center'><?php echo $notice->timestamp; ?></td>
-                    <td width='35%' align='center'><?php echo anchor('notice/view/'.$notice->id,$notice->title) ?></td>
-                    <td widh="25%" align='center'><?php echo $this->user->namebyid($notice->owner_id) ?></td>
-                    <td width="20%" align='center'>Actions Here</td>
+    <h4 id="records_title">FIRM NOTICES</h4>
+    <?php if (isset($notices_firm)){?>
+    <div id="records">
+        Showing <?php echo (count($notices_firm)<10)?count($notices_firm):10;?> recent firm notice(s).
+        <hr>
+        <table id="records">
 
-                </tr>
             <?php
-            endforeach;
-        }
-        ?>
+            if (isset($notices_firm)) {
+                foreach ($notices_firm as $notice):
+                    ?> 
+                    <tr id="record" href="<?php echo base_url() . "notice/view/" . $notice->id ?>">
+                        <td width='25%' align='center'><?php echo $notice->timestamp; ?></td>
+                        <td width='35%' align='center'><?php echo $notice->title ?></td>
+                        <td widh="25%" align='center'><?php echo $this->user->namebyid($notice->owner_id) ?></td>
+                        <td id="action" width="auto" align='center'><a href="notice/edit/<?php echo $notice->id ?>"><img src="<?php echo $this->config->item('button_url') . "edit.png" ?>"></a></td>
 
-    </table>
+                    </tr>
+                    <?php
+                endforeach;
+            }
+            ?>
+
+        </table>
+    </div>
+    <div id="toggle_message">Notice(s) hidden. Click the title to show.</div>
+    <?php } else echo "No firm notices found."?>
     <div id="commands">
-        <?php echo anchor('notice/type/firm', 'View all'); ?>
-<?php echo anchor('notice/add', 'Add'); ?>
+        <?php if (isset($notices_firm)){ echo anchor('notice/type/firm', 'View all');} ?>
+        <?php echo anchor('notice/add', 'Add');?>
     </div>
     <br>
 </div>
+
 <br>
 <div id ="info_wrapper">
-    <h4>CLIENT NOTICES</h4>
-    There will always be some text here for the client
+    <h4 id="records_title">CLIENT NOTICES</h4>
+    <?php if (isset($notices_firm)){?>
+    <div id="records">
+        Showing <?php echo (count($notices_firm)<10)?count($notices_firm):10;?> recent client notice(s).
+        <hr>
+        <table id="records">
+
+            <?php
+            if (isset($notices_firm)) {
+                foreach ($notices_firm as $notice):
+                    ?> 
+                    <tr id="record" href="<?php echo base_url() . "notice/view/" . $notice->id ?>">
+                        <td width='25%' align='center'><?php echo $notice->timestamp; ?></td>
+                        <td width='35%' align='center'><?php echo $notice->title ?></td>
+                        <td widh="25%" align='center'><?php echo $this->user->namebyid($notice->owner_id) ?></td>
+                        <td id="action" width="auto" align='center'><a href="notice/edit/<?php echo $notice->id ?>"><img src="<?php echo $this->config->item('button_url') . "edit.png" ?>"></a></td>
+
+                    </tr>
+                    <?php
+                endforeach;
+            }
+            ?>
+
+        </table>
+    </div>
+    <div id="toggle_message">Notice(s) hidden. Click the title to show.</div>
+    <?php } else echo "No firm notices found."?>
     <div id="commands">
-        <?php echo anchor('notice/go/type/client', 'View all'); ?>
-<?php echo anchor('notice/add', 'Add'); ?>
+        <?php if (isset($notices_firm)){ echo anchor('notice/type/firm', 'View all');} ?>
+        <?php echo anchor('notice/add', 'Add');?>
     </div>
     <br>
 </div>
-<br>
-<div id ="info_wrapper">
-    <h4>ASSIGNMENT NOTICES</h4>
-    There will always be some text here for the client
-    <div id="commands">
-        <?php echo anchor('notice/go/type/client', 'View all'); ?>
-<?php echo anchor('notice/add', 'Add'); ?>
-    </div>
-    <br>
-</div>
-<br>
 

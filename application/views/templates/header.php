@@ -4,7 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "css/main.css" ?>">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Electrolize|Ubuntu">
-        <script scr="<?php echo base_url() . "js/jquery.js" ?>"></script>
+        <script src="<?php echo base_url() . "js/jquery.js" ?>"></script>
+        <script src="<?php echo base_url() . "js/newscript.js" ?>"></script>
         <title><?php echo $title ?></title>
 
     <div id="site_title">

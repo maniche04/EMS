@@ -20,11 +20,12 @@ hr {
 body {
     background-color: gainsboro;
     margin: 0 0 20px; /* bottom = footer height */
+    margin-bottom: 20px;
 }
 
 .wrapper {
     height: auto;
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: Electrolize;
     text-align: justify;
 }
@@ -34,6 +35,7 @@ body {
     position: relative;
     padding: 10px;
     padding-top: 1px;
+    padding-bottom: 37px;
     float: left;
 
 }
@@ -166,7 +168,7 @@ a#current_link {
 }
 
 .nav_bar {
-    margin-top: -15px;
+    margin-top: -4px;
     float:right;
     height: 100%;
     width: 162px;
@@ -254,8 +256,6 @@ h3 {
 
 }
 
-
-
 #commands a {
     padding: 5px;
     border-radius: 5px;
@@ -275,25 +275,22 @@ h3 {
     background-color: white;
 }
 
-#info_wrapper table{
+.tab_content table{
     font-family: Ubuntu;
     font-size: 0.9em;
     border-radius: 6px;
     width: 90%;
     border-collapse: collapse;
     padding: 2px;
-    
+
 }
 
 td {
-    height: 9px;
-    padding: 3px;
+    height: 6px;
+    padding: 0px;
 }
 
-#info_wrapper tr:nth-child(odd) {
-    background-color: lightblue;
-    border-radius: 3px;
-}
+
 
 *[data-href] {
     cursor: pointer;
@@ -302,4 +299,50 @@ td {
 th {
     background-color: #143270;
     color: white;
+}
+
+#records a{
+    margin: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: white;
+    background: none;
+    text-decoration: none
+}
+
+tr .odd{
+    background-color: lightblue;
+    color:black;
+}
+
+.tabbed_view h4{
+    margin-left: 6px;
+    font-size: 1.1em;
+    width: 110px;
+    font-family: Electrolize;
+    text-align: center;
+    background-color: #143270;
+    border-radius: 5px;
+    float:left;
+    display: block;
+    color: white;
+    padding: 3px;
+    -webkit-box-shadow: 0 2px 0 0 lightblue;
+}
+
+.tab_content {
+    clear:both;
+    padding: 10px;
+}
+
+.tabbed_view {
+    font-family: Ubuntu;
+    padding: 3px;
+    padding-top: -10px;
+    padding-left: 9px;
+    background-image: url('../resource/img/login_gradient.jpg');
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-right: 9px;
 }

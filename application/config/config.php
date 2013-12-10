@@ -21,6 +21,7 @@ $config['site_short_name']    = "EMS";
 $config['css_url']      = $config['base_url'] . "css/";
 $config['img_url']      = $config['base_url'] . "resource/img/";
 $config['logo_url']     = $config['base_url'] . "resource/img/logo.png";
+$config['button_url']     = $config['base_url'] . "resource/img/buttons/";
 
 /*
 |--------------------------------------------------------------------------
