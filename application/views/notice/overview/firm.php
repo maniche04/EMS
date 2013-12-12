@@ -22,7 +22,7 @@
 
         </table>
     </div>
-    <div id="toggle_message">Notice(s) hidden. Click the title to show.</div>
+    
 <?php } else echo "No firm notices found." ?>
 <div id="commands">
     <?php if (isset($notices_firm)) {

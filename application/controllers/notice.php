@@ -47,7 +47,7 @@ class Notice extends CI_Controller {
         }
     }
 
-    public function type_get() {
+    public function get_type() {
         if (!($type = $this->uri->segment(3))) {
             redirect('notice/index');
         } else {

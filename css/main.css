@@ -317,13 +317,27 @@ tr .odd{
 
 .tabbed_view h4{
     margin-left: 6px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     width: 110px;
     font-family: Electrolize;
     text-align: center;
     background-color: #143270;
     border-radius: 5px;
     float:left;
+    display: block;
+    color: white;
+    padding: 3px;
+    -webkit-box-shadow: 0 2px 0 0 lightblue;
+}
+.current p{
+    margin-left: 6px;
+    font-size: 1.3em;
+    width: 110px;
+    font-family: Electrolize;
+    text-align: center;
+    background-color: #143270;
+    border-radius: 5px;
+    float:right;
     display: block;
     color: white;
     padding: 3px;
