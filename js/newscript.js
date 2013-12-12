@@ -9,7 +9,7 @@ $(document).ready(function() {
     $("h4").mouseenter(function() {
         $(this).css({"cursor": "pointer"})
     });
-
+    
     //action after clicking the header
     $("h4").click(function() {
         
@@ -51,5 +51,6 @@ $(document).ready(function() {
             $("div").filter("#loading").hide(400);
         }, 1200);
     });
+    $('h4').filter('#autoload').trigger('click');
 });
         
