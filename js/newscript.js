@@ -14,9 +14,9 @@ $(document).ready(function() {
     $("h4").click(function() {
         
         //float the clicked link to right
-        $("h4").filter('.tab_link').css({"font-size":"0.9em","background-color":"#143270","color":"white"});
+        $("h4").filter('.tab_link').css({"font-size":"0.9em","background-color":"#143270","color":"white","border":"none"});
         
-       $(this).css({"float":"left","font-size":"1.1em","background-color":"gainsboro","color":"#A70000"});
+       $(this).css({"float":"left","font-size":"1.1em","background-color":"gainsboro","color":"#c61f30","border-color":"#c61f30","border-style":"solid","border-width":"1px"});
         
         
 
@@ -38,10 +38,10 @@ $(document).ready(function() {
                 $("tr:odd").css({"background-color": "lightblue", "color": "black"});
                 $("tr:even").css({"background": "none", "color": "black"});
                 $("tr").filter('#record').mouseenter(function() {
-                    $(this).css({"background-color": "#A70000", "color": "gainsboro", "cursor": "pointer"});
+                    $(this).css({"background-color": "#c61f30", "color": "gainsboro", "cursor": "pointer"});
                 });
                 $("tr").filter('#record').mouseleave(function() {
-                    $(this).css({"background-color": "#A70000", "color": "gainsboro"});
+                    $(this).css({"background-color": "#c61f30", "color": "gainsboro"});
                     $("tr:odd").css({"background-color": "lightblue", "color": "black"});
                     $("tr:even").css({"background": "none", "color": "black"});
 

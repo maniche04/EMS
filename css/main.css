@@ -75,12 +75,12 @@ body {
     font-family: Electrolize;
     text-align: center;
     color: black;
-    background-image:url('../resource/img/login_gradient.jpg');
+    background-color: #6fa3d5;
     border-top: 2px;
     border-left: 0px;
     border-right: 0px;
     border-bottom: 0px;
-    border-color: #A70000;
+    border-color: #c61f30;
     border-style: solid;
 
 }
@@ -95,7 +95,7 @@ body {
 
 #site_title {
     height: 80px;
-    background-image:url('../resource/img/login_gradient.jpg');
+    background-color: #6fa3d5;
     width: 100%;
     margin-top: -1px;
     margin-bottom: 0px;
@@ -104,7 +104,7 @@ body {
     border-left: 0px;
     border-right: 0px;
     border-bottom: 2px;
-    border-color: #A70000;
+    border-color: #c61f30;
     border-style: solid;
 
 }
@@ -125,10 +125,11 @@ body {
     font-family: Electrolize;
     color: white;
     clear: both;
-    background: #A70000;
+    background: #c61f30;
 }
 
 #links {
+    font-weight: 600;
     padding-right: 4px;
     float: left;
 }
@@ -147,22 +148,22 @@ a{
     padding-right: 12px;
     display: block;
     color: white;
-    background: #A70000;
+    background: #c61f30;
     text-decoration: none
 }
 
 a:hover{
-    color: #A70000;
+    color: #c61f30;
     background: gainsboro;
 }
 
 a:active{
-    color: #A70000;
+    color: #c61f30;
     background: white;
 }
 
 a#current_link {
-    color: #A70000;
+    color: #c61f30;
     background: gainsboro;
 
 }
@@ -178,7 +179,7 @@ a#current_link {
     padding-right: 0px;
     font-family: Electrolize;
     color: white;
-    background: #A70000;
+    background: #c61f30;
 }
 
 .nav_bar a{
@@ -189,16 +190,16 @@ a#current_link {
     padding-left: 12px;
     display: block;
     color: white;
-    background: #A70000;
+    background: #c61f30;
     text-decoration: none
 }
 .nav_bar a:hover{
-    color: #A70000;
+    color: #c61f30;
     background: gainsboro;
 }
 
 .nav_bar a:active{
-    color: #A70000;
+    color: #c61f30;
     background: white;
 }
 
@@ -225,6 +226,8 @@ a#current_link {
     margin-top: 12px;
     margin-bottom: 12px;
     padding-right: 9px;
+    box-shadow: lightblue 0 0 4px 0;
+    
 }
 
 h4 {
@@ -262,18 +265,23 @@ h3 {
     float:right;
     display: block;
     font-size: 0.8em;
-    background-color: #A70000;
+    background-color: #c61f30;
 }
 
 #commands a:hover {
-    color: #A70000;
+    color: #c61f30;
     background-color: gainsboro;
+    box-shadow: #c61f30 0px 0px 1px 1px;
 }
 
 #commands a:active {
-    color: #A70000;
+    color: #c61f30;
     background-color: white;
+    box-shadow: #c61f30 0px 0px 1px 1px;
+    
 }
+
+
 
 .tab_content table{
     font-family: Ubuntu;
@@ -282,6 +290,7 @@ h3 {
     width: 90%;
     border-collapse: collapse;
     padding: 2px;
+  
 
 }
 
@@ -327,7 +336,7 @@ tr .odd{
     display: block;
     color: white;
     padding: 3px;
-    -webkit-box-shadow: 0 2px 0 0 lightblue;
+    -webkit-box-shadow: 0px 0px 2px 0 #c61f30;
 }
 .current p{
     margin-left: 6px;
@@ -354,9 +363,11 @@ tr .odd{
     padding: 3px;
     padding-top: -10px;
     padding-left: 9px;
-    background-image: url('../resource/img/login_gradient.jpg');
+    background-image: url('../resource/img/info_background.jpg');
     border-radius: 4px;
     margin-top: 12px;
     margin-bottom: 12px;
     padding-right: 9px;
+    box-shadow: #c61f30 0px 2px 1px 3px;
+    
 }
