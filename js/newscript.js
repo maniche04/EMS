@@ -35,14 +35,14 @@ $(document).ready(function() {
                 $("tr").filter('#record').click(function() {
                     window.document.location = $(this).attr("href");
                 });
-                $("tr:odd").css({"background-color": "lightblue", "color": "black"});
+                $("tr:odd").css({"background-color": "#C2C2FF", "color": "black"});
                 $("tr:even").css({"background": "none", "color": "black"});
                 $("tr").filter('#record').mouseenter(function() {
                     $(this).css({"background-color": "#c61f30", "color": "gainsboro", "cursor": "pointer"});
                 });
                 $("tr").filter('#record').mouseleave(function() {
                     $(this).css({"background-color": "#c61f30", "color": "gainsboro"});
-                    $("tr:odd").css({"background-color": "lightblue", "color": "black"});
+                    $("tr:odd").css({"background-color": "#C2C2FF", "color": "black"});
                     $("tr:even").css({"background": "none", "color": "black"});
 
                 });

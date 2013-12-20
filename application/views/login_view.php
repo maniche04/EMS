@@ -23,12 +23,21 @@ and open the template in the editor.
 
                 <table align ="center" width="80%">
                     <tr>
-                        <td align="left"><b>Username: </b></td>
-                        <td><?php echo form_input('username', set_value('username',"")) ?></td>
+                        <td align="left"><b></b></td>
+                        <?php
+                        $input_data = array(
+                            'name' => 'username',
+                            'placeholder' => 'Username',
+                            'value' => set_value('username', ""),
+                            'autofocus' => true
+                        );
+                        ?>
+
+                        <td><?php echo form_input($input_data) ?></td>
                     </tr>
                     <tr>
-                        <td align="left"><b>Password: </b></td>     
-                        <td><input type="password" name="password"><td>   
+                        <td align="left"><b></b></td>     
+                        <td><input type="password" name="password" placeholder="Password"><td>   
                     </tr>
                 </table>
 
